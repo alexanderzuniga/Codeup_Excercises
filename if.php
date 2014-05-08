@@ -45,4 +45,7 @@ if ($b !== $c) {
     echo "$b is not identical to $c\n";
 }
 
+echo "Not only can I do math. I can also Code!!!"
+
+
 ?>
