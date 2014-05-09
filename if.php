@@ -6,14 +6,12 @@ $c = '35';
 
 // Add an else to the next two statments. 
 if ($a < $b) {
-    // output the appropriate result
     echo "$a is less than $b\n";
     } else {
         echo "$a is greater than $b.\n";
 }
 
 if ($b > $a) {
-    // output the appropriate result
     echo "$b is greater than $a\n";
     } else {
        echo "$b is less than $a.\n";
@@ -21,7 +19,6 @@ if ($b > $a) {
 
 // Shorten the next 2 statements into an if/else
 if ($b >= $c) {
-    // output the appropriate result
     echo "$b is greater or equal to $c\n";
    } else {
     echo "$b is less than or equal to $c\n";
@@ -34,19 +31,14 @@ if ($b >= $c) {
 
 
 if ($b == $c) {
-    // output the appropriate result
+    
     echo "$b is equal to $c\n";
-}
+   }  elseif ($b != $c) {
+       echo "$b is not equal to $c\n";
+    
+    } elseif ($b === $c) {
+       echo "$b is identical to $c\n";
 
-
-elseif ($b != $c) {
-    // output the appropriate result
-    echo "$b is not equal to $c\n";
-}
-
-elseif ($b === $c) {
-    // output the appropriate result
-    echo "$b is identical to $c\n";
 }
 
 
