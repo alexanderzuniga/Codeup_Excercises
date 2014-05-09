@@ -1,10 +1,10 @@
 <?php
 
 $a = 5;
-$b = 10;
-$c = 'int';
+$b = '35';
+$c = '35';
 
-//Add an else to the next two statments. 
+// Add an else to the next two statments. 
 if ($a < $b) {
     // output the appropriate result
     echo "$a is less than $b\n";
@@ -23,19 +23,17 @@ if ($b > $a) {
 if ($b >= $c) {
     // output the appropriate result
     echo "$b is greater or equal to $c\n";
-}
-
-if ($b <= $c) {
-    // output the appropriate result
+   } else {
     echo "$b is less than or equal to $c\n";
-}
+    }
+
 
 // combine the next 4 conditionals into 
 // one if/else/elseif block that checks in order for:
 // identical, equal, not identical, not equal
 
 
-elseif ($b == $c) {
+if ($b == $c) {
     // output the appropriate result
     echo "$b is equal to $c\n";
 }
@@ -46,7 +44,7 @@ elseif ($b != $c) {
     echo "$b is not equal to $c\n";
 }
 
-if ($b === $c) {
+elseif ($b === $c) {
     // output the appropriate result
     echo "$b is identical to $c\n";
 }
