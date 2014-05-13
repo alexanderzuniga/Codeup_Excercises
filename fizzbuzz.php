@@ -7,13 +7,17 @@
 
 // But for multiples of three print “Fizz” instead of the number and
 for ($c = 0; $c <= 100; $c++) {
-	if ($c % 3 == 0 && $c % 5 == 0) {
+
+	$divBy3 = ($c % 3 == 0);
+	$divBy5 = ($c % 5 == 0);
+
+	if ($divBy3 && $divBy5) {
 		echo "FIZZBUZZ\n";
 	}
-	elseif ($c % 3 == 0)  {
+	elseif ($divBy3)  {
 		echo "FIZZ\n"; 
 	}
-	elseif ($c % 5 == 0) { 
+	elseif ($divBy5) { 
 		echo "BUZZ\n"; 
 	}
     else {
