@@ -1,28 +1,40 @@
 <?php
+
+//Control Structure exercise.
+//Alex Zuniga
+
 // Prompt user for a starting number and ending number, 
 
-	fwrite(STDOUT, "Enter a Starting Number please.\n");
+fwrite(STDOUT, "Enter a Starting Number please.\n");
 
 	$starting = trim(fgets(STDIN));
 
-	fwrite(STDOUT, "Now enter an Ending number.\n");
+fwrite(STDOUT, "Now enter an Ending number.\n");
 
 	$ending = trim(fgets(STDIN));
 	
 //then display all the numbers from the starting to ending using a for loop.
+fwrite(STDOUT, "Excellent! Now choose an number to count by. ");
 
-	// var_dump($starting);
-	// var_dump($ending);
-	// die();
+$increment = trim(fgets(STDIN));
 
-		for ($display = $starting; $display <= $ending; $display++) {
-		echo "$display\n";
+if ($starting < $ending) {
+
+	for ($display = $starting; $display <= $ending; $display += $increment) {
+	echo "$display\n";
 	}
+}
+ elseif ($starting > $ending) {
+	for ($display = $starting; $display >= $ending; $display -= $increment) {
+	echo "$display\n";
+	}
+}
 
 
 
 
 // Refactor to allow user to choose increment. (count by 1, 2, 10, ...)
+
 
 // Default increment to 1 if no input.
 
