@@ -6,6 +6,15 @@ foreach ($things as $type) {
     if (is_scalar($type)) {
     	echo "{$type} \n";
     }
+    elseif (is_null($type)) {
+    	echo "{$type} \n";
+    }
+    elseif (is_array ($type)) {
+    	foreach ($type as $inside_array) {
+    		echo "$inside_array \n"; 
+    	}
+    }
+  
 }
 
 ?>
