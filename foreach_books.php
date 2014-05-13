@@ -1,5 +1,6 @@
 <?php
 
+
 $books = array(
     'The Hobbit' => array(
         'published' => 1937,
@@ -24,7 +25,8 @@ $books = array(
 );
 
 foreach ($books as $titles => $details) {
-	echo "$titles\n";
+	echo $titles  .  " was published in " . $details['published'] . " by " . 
+	$details['author'] . " and has " .  $details['pages']  . " pages.\n";
 }
 
 
