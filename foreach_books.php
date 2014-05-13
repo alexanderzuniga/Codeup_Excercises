@@ -23,6 +23,11 @@ $books = array(
         'pages' => 544
     )
 );
+// foreach ($books as $titles => $details){
+// 	if ($details['published'] > 1950) {
+// 		echo $titles . PHP_EOL;
+// 	}
+// }
 
 foreach ($books as $titles => $details) {
 	echo $titles  .  " was published in " . $details['published'] . " by " . 
