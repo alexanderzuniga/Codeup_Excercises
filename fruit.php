@@ -1,16 +1,26 @@
 <?php 
 
-$fruit = [
-	1 => ['fruit'=> 'apple', 'color' => 'red'],
-	2 => ['fruit' => 'grape', 'color' => 'purple'],
-	3 => ['fruit' => 'melon', 'color' => 'green'] 
+$fruits = [
+	'apples'=> 'red',
+	'grapes'=> 'purple',
+	'melons' => 'green' 
 	
 ];	
-foreach($fruit as $key => $details) {
-	echo $details['fruit'] . ' is ' . $details['color'] . PHP_EOL;
+
+
+
+
+foreach($fruits as $fruit => $color) {
+	echo "{$fruit} are {$color}\n";
 }
 
+// $fruits = array('apple', 'orange', 'banana', 'grapes');
 
+// // for ($i = 0; $i < count($fruits); $i++) {
+// // 	echo $fruits[$i] .  PHP_EOL;
+// // }
 
-
+// foreach ($fruits as $fruit) {
+// 	echo $fruit . PHP_EOL;
+// }
 ?>
