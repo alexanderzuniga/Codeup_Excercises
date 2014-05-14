@@ -2,10 +2,10 @@
 
 for($i=0; $i <= 100; $i++) {
 	echo $i . PHP_EOL;
-	if ($i % 3 == 0) {
-	continue;
+	if ($i == 10) {
+	break;
 	}
-	echo "^^ this is an even number. \n";
+	
 }
 
 
