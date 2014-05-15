@@ -48,11 +48,12 @@ function divide($a, $b) {
     	echo "ERROR: Please enter denominator < or > 0. \n";
     } if (is_numeric($a) && is_numeric($b)) {
         echo $a / $b . PHP_EOL;
-    } else {
+    } elseif (!is_numeric($a) || !is_numeric($b)) {
         echo "ERROR: Both arguments must be numbers\n";
+        echo var_dump($a, $b);
     } 
 }
-divide('batman', 2);
+divide(4, 2);
 
 // compare('Omar','omar', false);
 // add(1,'batman');
