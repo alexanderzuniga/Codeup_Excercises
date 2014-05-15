@@ -1,64 +1,69 @@
 <?php
 
-
-// function add($a, $b) {
-//   if (is_numeric($a) && is_numeric($b)) {
-//         echo $a + $b . PHP_EOL;
-//     } else {
-//         echo "ERROR: Both arguments must be numbers\n";
-//     }
-// }  
-
-
-// function subtract($a, $b) {
-//   if (is_numeric($a) && is_numeric($b)) {
-//         echo $a - $b . PHP_EOL;
-//     } else {
-//         echo "ERROR: Both arguments must be numbers\n";
-//     }
-// }
-
-// function multiply($a, $b) {
-//     if (is_numeric($a) && is_numeric($b)) {
-//         echo $a * $b . PHP_EOL;
-//     } else {
-//         echo "ERROR: Both arguments must be numbers\n";
-//     }
-// }
-
-
-// function remain($a,$b) {
-// 	if (is_numeric($a) && is_numeric($b)) {
-//         echo $a * $b . PHP_EOL;
-//     } else {
-//         echo "ERROR: Both arguments must be numbers\n";
-//     }
-// }
-
-// function compare($a,$b, $strict = true) {
-// 	if($strict === true) {
-// 		echo $a === $b ? 'TRUE' : 'FALSE' . PHP_EOL;
-// 	    } else{ 
-// 			echo $a == $b ? 'TRUE' : 'FALSE' . PHP_EOL;
-// 		}
-		
-// }
-function divide($a, $b) {
-    if ($b == 0){
-    	echo "ERROR: Please enter denominator < or > 0. \n";
-    } if (is_numeric($a) && is_numeric($b)) {
-        echo $a / $b . PHP_EOL;
-    } elseif (!is_numeric($a) || !is_numeric($b)) {
-        echo "ERROR: Both arguments must be numbers\n";
-        echo var_dump($a, $b);
-    } 
+function error($a, $b, $is_not_numeric = true) {
+	if ($is_not_numeric) {
+        echo "ERROR: {$a} and/or {$b} are not numeric values, enter numbers.\n";
+    } else {
+        echo "ERROR: Please enter denominator < or > 0. \n";
+	}
 }
-divide(4, 2);
 
-// compare('Omar','omar', false);
-// add(1,'batman');
-// subtract('elf',5);
-// multiply('super',3);
-// remain(15,'three');
+function add($a, $b) {
+  if (is_numeric($a) && is_numeric($b)) {
+        echo $a + $b . PHP_EOL;
+    } else {
+    	error($a, $b);
+    }
+}
+    
+ 
+//add(1, "batman");
+
+function subtract($a, $b) {
+  if (is_numeric($a) && is_numeric($b)) {
+        echo $a - $b . PHP_EOL;
+    } else {
+    	error($a, $b);
+    	}
+
+}
+//subtract(4, 'batman');
+
+function mult($a, $b) {
+    if (is_numeric($a) && is_numeric($b)) {
+        echo $a * $b . PHP_EOL;
+    } else {
+    	error($a, $b);
+    	}
+}
+
+//mult(4, 'bartman');
+
+function remain($a,$b) {
+	if (is_numeric($a) && is_numeric($b)) {
+        echo $a % $b . PHP_EOL;
+    } else {
+    	error($a, $b);
+    	}
+}
+
+//remain(12,'batman');
+
+
+function divide($a, $b) {
+     if (is_numeric($a) && is_numeric($b)) {
+     	if ($b == 0) { 
+	    	error($a, $b, 0);
+	    } else {
+			echo $a / $b . PHP_EOL;
+		}
+	} else {
+		error($a, $b);
+	}
+}
+
+divide(4, 0);
+divide('a', 1);
+
 
 ?>
