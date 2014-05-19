@@ -1,24 +1,24 @@
 <?php
-$nothing = NULL;
+$nothing = "ALEX";
 $something = '';
 $array = array(1,2,3);
 
 // Create a function that checks if a variable is set or empty, and display "$variable_name is SET|EMPTY"
-function check($nothing) {
-	 if (empty($nothing)) {
+
+
+function check($a) {
+	 if (empty($a)) {
 	 	return '$nothing is EMPTY' . PHP_EOL;
-	 } else {
+	 } elseif (isset($a)) {
 	 	return '$nothing is SET' . PHP_EOL;
-		}
+	 } 
 }
+ 
 
-
-$a = check($nothing);
-echo $a;
-
-
-
-
+echo check($nothing) . PHP_EOL;
+echo check($something) . PHP_EOL;
+$factor = serialize($array);
+echo $factor . PHP_EOL; 
 
 // TEST: If var $nothing is set, display '$nothing is SET'
 
